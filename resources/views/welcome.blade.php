@@ -20,7 +20,12 @@
         <div class="row">
             <div class="col-12">
                 @foreach($trains as $train)
-                    {{ $train->azienda }} - {{ $train->codice_treno }}
+                    {{ $train->azienda }} - {{ $train->codice_treno }} - In orario:
+                    @if($train->in_orario)
+                        Sì
+                    @else
+                        No
+                    @endif
                 @endforeach
             </div>
         </div>

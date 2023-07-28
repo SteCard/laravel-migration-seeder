@@ -9,6 +9,10 @@ use App\Models\Train;
 class TrainsController extends Controller
 {
     public function index(){
-        return view('welcome');
+        // dd(now());
+        $now = date('Y-m-d', strtotime(now()));
+        $trains = Train::where('data_partenza', '>=', $now)->get();
+        
+        return view('welcome', compact($trains));
     }
 }

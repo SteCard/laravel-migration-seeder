@@ -14,7 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            //
+
+            $table->time('orario_partenza')->nullable()->default(NULL)->change();
+            $table->time('orario_arrivo')->nullable()->default(NULL)->change();
+            
         });
     }
 
@@ -25,9 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('trains', function (Blueprint $table) {
-            $table->time('orario_partenza')->change();
-            $table->time('orario_arrivo')->change();
-        });
+        //
     }
 };

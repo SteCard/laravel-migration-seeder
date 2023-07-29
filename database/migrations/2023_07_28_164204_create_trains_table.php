@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('stazione_arrivo', 100);
             $table->date('data_partenza');
             $table->date('data_arrivo');
-            $table->timestamp('orario_partenza');
+            $table->time('orario_partenza');
             $table->time('orario_arrivo');
             $table->string('codice_treno', 7);
             $table->integer('n_carrozze');

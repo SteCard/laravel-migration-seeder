@@ -30,7 +30,7 @@ class TrainsTableSeeder extends Seeder
             $train->data_arrivo = $faker->date();
             $train->orario_partenza = $faker->time();
             $train->orario_arrivo = $faker->time();
-            $train->codice_treno = $faker->bothify('nt???##');
+            $train->codice_treno = $faker->bothify('nt??###');
             $train->n_carrozze = $faker->numberBetween(1,15);
             $train->in_orario = $faker->boolean();
             $train->tempo_ritardo = $faker->time();

@@ -27,7 +27,7 @@ return new class extends Migration
     {
         Schema::table('trains', function (Blueprint $table) {
             $table->time('orario_partenza')->change();
-            $table->time('orario_partenza')->change();
+            $table->time('orario_arrivo')->change();
         });
     }
 };
